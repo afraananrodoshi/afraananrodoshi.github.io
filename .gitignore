@@ -4,3 +4,7 @@ _site/
 vendor/
 Gemfile.lock
 .DS_Store
+
+# Local working files, not published
+KICKOFF.md
+Resume_Afra.pdf
