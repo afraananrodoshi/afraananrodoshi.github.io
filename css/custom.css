@@ -1,0 +1,312 @@
+/* ---------------------------------------------------------------------------
+   custom.css — overrides on top of the Academic theme (css/academic.css).
+   Goal: a quieter, print-like palette suited to a medical CV site.
+   Keep all site-specific styling here; academic.css stays untouched so it can
+   be swapped wholesale if the theme is ever updated.
+   --------------------------------------------------------------------------- */
+
+:root {
+    --ink: #1b2b3a;
+    --ink-muted: #5a6b7b;
+    --accent: #1f3b57;
+    --accent-hover: #33597f;
+    --rule: #e2e6ea;
+    --tint: #f6f8f9;
+}
+
+body {
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--ink);
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.portrait-title h2 {
+    font-family: Lora, Georgia, "Times New Roman", serif;
+    color: var(--ink);
+}
+
+a {
+    color: var(--accent);
+}
+
+a:hover, a:focus {
+    color: var(--accent-hover);
+}
+
+/* Navigation ------------------------------------------------------------- */
+
+#navbar-main {
+    background-color: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: none;
+}
+
+.navbar-light .navbar-brand {
+    color: var(--ink);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--ink-muted);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active > .nav-link {
+    color: var(--accent);
+}
+
+/* Sections --------------------------------------------------------------- */
+
+.home-section {
+    padding: 3.5rem 0;
+}
+
+.home-section.section-alt {
+    background-color: var(--tint);
+}
+
+.section-heading h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+    .section-heading h1 {
+        position: sticky;
+        top: 90px;
+    }
+}
+
+/* Profile ---------------------------------------------------------------- */
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    border: 1px solid var(--rule);
+}
+
+.portrait-title h2 {
+    font-size: 1.45em;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.portrait-title h3 {
+    font-size: 0.98em;
+    font-weight: 400;
+    color: var(--ink-muted);
+    margin-bottom: 0.15rem;
+}
+
+.network-icon .big-icon {
+    color: var(--ink-muted);
+    font-size: 1.35rem;
+}
+
+.network-icon a:hover .big-icon {
+    color: var(--accent);
+}
+
+/* Entry cards ------------------------------------------------------------ */
+
+.card-simple {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.card-simple:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.card-simple .article-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.card-simple .article-header {
+    color: var(--ink-muted);
+    line-height: 1.45;
+}
+
+.article-metadata {
+    color: var(--ink-muted);
+    font-size: 0.92rem;
+    margin-top: 0.35rem;
+}
+
+.article-style {
+    font-size: 1rem;
+}
+
+.article-style ul {
+    padding-left: 1.15rem;
+    margin-bottom: 0;
+}
+
+.article-style li {
+    margin-bottom: 0.3rem;
+}
+
+/* Education list --------------------------------------------------------- */
+
+.ul-edu .description .course {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.ul-edu .description .institution {
+    color: var(--ink-muted);
+    margin-bottom: 0;
+}
+
+.ul-edu .fa-li {
+    color: var(--ink-muted);
+}
+
+/* Buttons ---------------------------------------------------------------- */
+
+.btn-outline-primary {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* Contact ---------------------------------------------------------------- */
+
+.wg-contact .fa-ul li {
+    margin-bottom: 0.9rem;
+}
+
+.wg-contact .fa-li {
+    color: var(--ink-muted);
+    font-size: 1.15rem;
+}
+
+/* Footer ----------------------------------------------------------------- */
+
+.site-footer {
+    border-top: 1px solid var(--rule);
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+    padding-top: 1.25rem;
+}
+
+.back-to-top .fa-2x {
+    font-size: 1.25rem;
+}
+
+/* Accessibility ---------------------------------------------------------- */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1100;
+    background: #fff;
+    color: var(--accent);
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--accent);
+}
+
+.skip-link:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Small screens ---------------------------------------------------------- */
+
+@media (max-width: 991px) {
+    .home-section {
+        padding: 2.25rem 0;
+    }
+
+    .avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .navbar-light .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+/* Print ------------------------------------------------------------------ */
+
+@media print {
+    #navbar-main,
+    .back-to-top,
+    .network-icon,
+    .btn {
+        display: none !important;
+    }
+
+    .home-section {
+        padding: 1rem 0;
+        background: none !important;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #555;
+    }
+}
+
+/* Applicant details (AAMC ID, ERAS, email) ------------------------------- */
+
+.applicant-details {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.35rem 1.25rem;
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--tint);
+    border-left: 3px solid var(--accent);
+    font-size: 0.97rem;
+}
+
+.applicant-details dt {
+    font-weight: 600;
+    color: var(--ink-muted);
+    white-space: nowrap;
+}
+
+.applicant-details dd {
+    margin: 0;
+}
+
+@media (max-width: 575px) {
+    .applicant-details {
+        grid-template-columns: 1fr;
+        gap: 0 0;
+    }
+
+    .applicant-details dd {
+        margin-bottom: 0.6rem;
+    }
+}

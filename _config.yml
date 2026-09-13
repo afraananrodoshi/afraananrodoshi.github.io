@@ -1,0 +1,18 @@
+# Minimal Jekyll config for afraananrodoshi.github.io
+# Pages are hand-written HTML using {% include %} partials; no theme gem.
+title: Afra Anan Rodoshi
+description: >-
+  Afra Anan Rodoshi, MBBS — international medical graduate applying for
+  US residency in Internal Medicine and Family Medicine.
+url: https://afraananrodoshi.github.io
+lang: en-us
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - push.sh
+  - README.md
+  - vendor/
+  - KICKOFF.md
+  - .gitignore
+  - Resume_Afra.pdf
