@@ -33,6 +33,26 @@ Then open http://127.0.0.1:4321/.
 **Replace the profile photo** — overwrite `img/afra.jpg`. A square image of at
 least 440x440 works best; it is displayed as a circle. No code change needed.
 
+**Research images** — each entry in `_includes/research.html` is a
+`.research-item` holding a `.research-body` and, optionally, a
+`.research-figures` block. Drop the files in `img/research/` (a full-size image
+plus a thumbnail around 480px wide), then add inside that entry, after
+`.research-body`:
+
+    <div class="research-figures">
+        <a href="/img/research/FILE.jpg" data-fancybox="GROUP"
+           data-caption="Short description">
+            <img src="/img/research/FILE-thumb.jpg" alt="Short description"
+                 loading="lazy" width="480" height="360">
+        </a>
+    </div>
+
+Repeat the `<a>` for each extra image, giving every image in the same entry the
+same `data-fancybox` GROUP so they browse as one set in the lightbox. Entries
+with no images need no `.research-figures` at all — the text simply takes the
+full width. Paper snapshots for the two journal articles are still to come;
+their entries carry a comment marking where the block goes.
+
 **Update the CV** — overwrite `cv.pdf`. It is linked from the nav, the About
 section, and Contact.
 

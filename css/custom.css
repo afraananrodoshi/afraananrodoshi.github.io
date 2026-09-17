@@ -310,3 +310,67 @@ button:focus-visible {
         margin-bottom: 0.6rem;
     }
 }
+
+/* Research entries with images ------------------------------------------- */
+
+.research-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.research-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.research-figures {
+    flex: 0 0 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.research-figures a {
+    display: block;
+    line-height: 0;
+    border: 1px solid var(--rule);
+    background: #fff;
+    padding: 4px;
+    transition: border-color 0.15s ease;
+}
+
+.research-figures a:hover,
+.research-figures a:focus-visible {
+    border-color: var(--accent);
+}
+
+.research-figures img {
+    width: 100%;
+    height: auto;
+}
+
+/* Stack the image under the text on narrow screens. */
+@media (max-width: 767px) {
+    .research-item {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .research-figures {
+        flex-basis: auto;
+        align-self: stretch;
+        max-width: 420px;
+    }
+}
+
+@media print {
+    .research-item {
+        display: block;
+    }
+
+    .research-figures {
+        max-width: 240px;
+    }
+}
